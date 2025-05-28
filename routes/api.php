@@ -4,10 +4,16 @@ use Illuminate\Http\Request;
 use App\Http\Resources\UserResource;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\BarangController;
-use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\StockController;
+use App\Http\Controllers\Course_LecturersController;
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\CourseLecturerController;
+use App\Http\Controllers\CoursesController;
+use App\Http\Controllers\Enrollment2Controller;
+use App\Http\Controllers\EnrollmentController;
+use App\Http\Controllers\LecturerController;
+use App\Http\Controllers\LecturersController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\UserController;
 
 
@@ -25,11 +31,12 @@ Route::middleware('auth:sanctum')->group(function () {
     // });
 
     Route::apiResource('user', UserController::class);
-    Route::apiResource('customer', CustomerController::class);
-    Route::apiResource('barang', BarangController::class);
-    Route::apiResource('stock', StockController::class);
-    Route::apiResource('order', OrderController::class);
-   
+    Route::apiResource('student', StudentController::class);
+    Route::apiResource('courselecturers', CourseLecturerController::class);
+    Route::apiResource('course', CourseController::class);
+    Route::apiResource('lecturers', LecturerController::class);
+    Route::apiResource('enrollment', Enrollment2Controller::class);
+
 });
 
 
